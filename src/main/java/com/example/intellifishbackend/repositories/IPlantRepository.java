@@ -1,4 +1,8 @@
 package com.example.intellifishbackend.repositories;
 
-public interface IPlantRepository {
+import com.example.intellifishbackend.entities.Plant;
+import org.springframework.data.jpa.repository.JpaRepository;
+
+public interface IPlantRepository extends JpaRepository<Plant, Long> {
+
 }

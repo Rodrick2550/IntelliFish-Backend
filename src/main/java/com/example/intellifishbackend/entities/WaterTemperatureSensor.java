@@ -5,7 +5,7 @@ import lombok.Getter;
 import lombok.Setter;
 
 @Entity
-@Table(name = "watertemperaturesensor")
+@Table(name = "watertemperaturesensor1")
 @Getter
 @Setter
 public class WaterTemperatureSensor {

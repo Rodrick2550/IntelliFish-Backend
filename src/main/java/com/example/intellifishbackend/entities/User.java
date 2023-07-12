@@ -1,8 +1,11 @@
 package com.example.intellifishbackend.entities;
 
+import com.fasterxml.jackson.annotation.JsonManagedReference;
 import jakarta.persistence.*;
 import lombok.Getter;
 import lombok.Setter;
+
+import java.util.List;
 
 @Entity
 @Table(name = "users")
@@ -25,5 +28,16 @@ public class User {
 
     @Column()
     private String password;
+
+    @Column(length = 5)
+    private String code;
+
+    @OneToMany(mappedBy = "user", cascade = CascadeType.ALL)
+    @JsonManagedReference
+    private List <Plant> plants;
+
+    @OneToMany(mappedBy = "user", cascade = CascadeType.ALL)
+    @JsonManagedReference
+    private List <Fish> fish;
 
 }

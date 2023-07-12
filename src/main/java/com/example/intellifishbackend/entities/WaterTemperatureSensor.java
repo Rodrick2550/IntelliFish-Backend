@@ -15,8 +15,11 @@ public class WaterTemperatureSensor {
     private Long id;
 
     @Column()
-    private Float value;
+    private Float variance;
 
     @Column()
-    private String measure;
+    private Float standardDeviation;
+
+    @Column()
+    private Float meanDeviation;
 }

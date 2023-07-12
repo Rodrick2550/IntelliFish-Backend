@@ -2,7 +2,6 @@ package com.example.intellifishbackend.services;
 
 import com.example.intellifishbackend.controllers.dtos.requests.CreateFishRequest;
 import com.example.intellifishbackend.controllers.dtos.requests.UpdateFishRequest;
-import com.example.intellifishbackend.controllers.dtos.requests.UpdateUserRequest;
 import com.example.intellifishbackend.controllers.dtos.responses.BaseResponse;
 import com.example.intellifishbackend.controllers.exceptions.ObjectNotFoundException;
 import com.example.intellifishbackend.entities.Fish;
@@ -93,7 +92,7 @@ public class FishServiceImpl implements IFishService {
                 .message("Fishes found")
                 .success(Boolean.TRUE)
                 .httpStatus(HttpStatus.OK)
-                .build()
+                .build();
     }
 
     @Override

@@ -5,7 +5,7 @@ import lombok.Getter;
 import lombok.Setter;
 
 @Entity
-@Table(name = "watertemperaturesensor1")
+@Table(name = "watertemperaturesensor")
 @Getter
 @Setter
 public class WaterTemperatureSensor {
@@ -15,8 +15,11 @@ public class WaterTemperatureSensor {
     private Long id;
 
     @Column()
-    private Float value;
+    private Float variance;
 
     @Column()
-    private String measure;
+    private Float standardDeviation;
+
+    @Column()
+    private Float meanDeviation;
 }

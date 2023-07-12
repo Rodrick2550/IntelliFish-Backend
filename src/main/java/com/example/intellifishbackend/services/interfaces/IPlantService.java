@@ -6,14 +6,14 @@ import com.example.intellifishbackend.controllers.dtos.responses.BaseResponse;
 import com.example.intellifishbackend.entities.Plant;
 import org.springframework.stereotype.Service;
 
-@Service
+
 public interface IPlantService {
 
     BaseResponse get (Long id);
 
     BaseResponse create (CreatePlantRequest request);
 
-    BaseResponse update (UpdatePlantRequest request);
+    BaseResponse update (Long id, UpdatePlantRequest request);
 
     BaseResponse delete (Long id);
 

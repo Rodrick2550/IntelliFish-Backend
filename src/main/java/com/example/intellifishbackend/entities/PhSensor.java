@@ -13,12 +13,18 @@ public class PhSensor {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    @Column()
-    private Float variance;
+    @Column
+    private String measure;
 
-    @Column()
-    private Float standardDeviation;
+    @Column
+    private String average;
 
-    @Column()
-    private Float meanDeviation;
+    @Column
+    private String variance;
+
+    @Column
+    private String standardDeviation;
+
+    @Column
+    private String meanDeviation;
 }

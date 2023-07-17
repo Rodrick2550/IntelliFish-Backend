@@ -14,13 +14,19 @@ public class WaterFlowSensor {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     
     private Long id;
+
+    @Column
+    private String measure;
     
     @Column()
-    private Float variance;
+    private String variance;
+
+    @Column
+    private String average;
     
     @Column()
-    private Float standardDeviation;
+    private String standardDeviation;
 
     @Column()
-    private Float meanDeviation;
+    private String meanDeviation;
 }

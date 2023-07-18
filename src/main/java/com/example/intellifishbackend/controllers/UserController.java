@@ -1,8 +1,6 @@
 package com.example.intellifishbackend.controllers;
 
-import com.example.intellifishbackend.controllers.dtos.requests.CreateFishRequest;
 import com.example.intellifishbackend.controllers.dtos.requests.CreateUserRequest;
-import com.example.intellifishbackend.controllers.dtos.requests.UpdateFishRequest;
 import com.example.intellifishbackend.controllers.dtos.requests.UpdateUserRequest;
 import com.example.intellifishbackend.controllers.dtos.responses.BaseResponse;
 import com.example.intellifishbackend.services.interfaces.IUserService;

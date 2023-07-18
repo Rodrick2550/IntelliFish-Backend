@@ -2,7 +2,6 @@ package com.example.intellifishbackend.services;
 
 import com.example.intellifishbackend.MQTT.dtos.PhSensorDataBodyRequest;
 import com.example.intellifishbackend.controllers.dtos.responses.BaseResponse;
-import com.example.intellifishbackend.controllers.exceptions.ObjectNotFoundException;
 import com.example.intellifishbackend.entities.PhSensor;
 import com.example.intellifishbackend.repositories.IPhSensorRepository;
 import com.example.intellifishbackend.services.interfaces.IPhSensorService;
@@ -11,7 +10,6 @@ import org.springframework.http.HttpStatus;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
-import java.util.stream.Collectors;
 
 @Service
 public class PhSensorServiceImpl implements IPhSensorService {
@@ -41,8 +39,36 @@ public class PhSensorServiceImpl implements IPhSensorService {
                 .httpStatus(HttpStatus.OK)
                 .build();
     }
+    @Override
+    public String findLastDataFromAverage(){
 
+        return repository.findLastDataFromAverage();
+    }
 
+    @Override
+    public String findLastDataFromMeanDeviation() {
+
+        return repository.findLastDataFromMeanDeviation();
+    }
+
+    @Override
+    public String findLastDataFromMeasure() {
+
+        return repository.findLastDataFromMeasure();
+
+    }
+
+    @Override
+    public String findLastDataFromStandardDeviation() {
+
+        return repository.findLastDataFromStandardDeviation();
+    }
+
+    @Override
+    public String findLastDataFromVariance() {
+
+        return repository.findLastDataFromVariance();
+    }
 
 
     private PhSensor from(PhSensorDataBodyRequest request){

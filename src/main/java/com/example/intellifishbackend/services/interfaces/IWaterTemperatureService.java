@@ -8,4 +8,14 @@ public interface IWaterTemperatureService {
     void create(WaterTemperatureSensorDataBodyRequest request);
 
     BaseResponse list();
+
+    String findLastDataFromAverage();
+
+    String findLastDataFromMeanDeviation();
+
+    String findLastDataFromMeasure();
+
+    String findLastDataFromStandardDeviation();
+
+    String findLastDataFromVariance();
 }

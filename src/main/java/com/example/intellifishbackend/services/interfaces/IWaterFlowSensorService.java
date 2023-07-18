@@ -8,4 +8,14 @@ public interface IWaterFlowSensorService {
     void create(WaterFlowSensorDataBodyRequest request);
 
     BaseResponse list();
+
+    String findLastDataFromAverage();
+
+    String findLastDataFromMeanDeviation();
+
+    String findLastDataFromMeasure();
+
+    String findLastDataFromStandardDeviation();
+
+    String findLastDataFromVariance();
 }

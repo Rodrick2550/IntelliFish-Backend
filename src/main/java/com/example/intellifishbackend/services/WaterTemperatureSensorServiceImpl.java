@@ -39,6 +39,32 @@ public class WaterTemperatureSensorServiceImpl implements IWaterTemperatureServi
                 .build();
     }
 
+    @Override
+    public String findLastDataFromAverage() {
+
+        return repository.findLastDataFromAverage();
+    }
+
+    @Override
+    public String findLastDataFromMeanDeviation() {
+        return repository.findLastDataFromMeanDeviation();
+    }
+
+    @Override
+    public String findLastDataFromMeasure() {
+        return repository.findLastDataFromMeasure();
+    }
+
+    @Override
+    public String findLastDataFromStandardDeviation() {
+        return repository.findLastDataFromStandardDeviation();
+    }
+
+    @Override
+    public String findLastDataFromVariance() {
+        return repository.findLastDataFromVariance();
+    }
+
     private WaterTemperatureSensor from(WaterTemperatureSensorDataBodyRequest request){
         WaterTemperatureSensor waterTemperatureSensor = new WaterTemperatureSensor();
 

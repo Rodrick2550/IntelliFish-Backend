@@ -10,6 +10,14 @@ public interface IPhSensorService {
 
      BaseResponse list();
 
+    String findLastDataFromAverage();
 
+    String findLastDataFromMeanDeviation();
+
+    String findLastDataFromMeasure();
+
+    String findLastDataFromStandardDeviation();
+
+    String findLastDataFromVariance();
 
 }

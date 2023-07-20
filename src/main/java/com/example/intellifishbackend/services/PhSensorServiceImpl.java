@@ -39,35 +39,43 @@ public class PhSensorServiceImpl implements IPhSensorService {
                 .httpStatus(HttpStatus.OK)
                 .build();
     }
-    @Override
-    public String findLastDataFromAverage(){
 
-        return repository.findLastDataFromAverage();
+    @Override
+    public String[] findLastDataFromAverage() {
+
+        String [] data = repository.findLastDataFromAverage();
+
+        return data;
     }
 
     @Override
-    public String findLastDataFromMeanDeviation() {
+    public String [] findLastDataFromMeanDeviation() {
 
-        return repository.findLastDataFromMeanDeviation();
+        String [] data = repository.findLastDataFromMeanDeviation();
+        return data;
     }
 
     @Override
-    public String findLastDataFromMeasure() {
+    public String [] findLastDataFromMeasure() {
 
-        return repository.findLastDataFromMeasure();
+        String [] data = repository.findLastDataFromMeasure();
 
+        return data;
     }
 
     @Override
-    public String findLastDataFromStandardDeviation() {
+    public String [] findLastDataFromStandardDeviation() {
 
-        return repository.findLastDataFromStandardDeviation();
+        String [] data = repository.findLastDataFromStandardDeviation();
+
+        return data;
     }
 
     @Override
-    public String findLastDataFromVariance() {
+    public String [] findLastDataFromVariance() {
 
-        return repository.findLastDataFromVariance();
+        String [] data = repository.findLastDataFromVariance();
+        return data;
     }
 
 

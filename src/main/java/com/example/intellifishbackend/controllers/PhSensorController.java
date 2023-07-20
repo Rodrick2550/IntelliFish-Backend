@@ -15,45 +15,45 @@ public class PhSensorController {
     @Autowired
     private IPhSensorService service;
     @GetMapping("average")
-    public ResponseEntity<String> findLastDataFromAverage(){
+    public String [] findLastDataFromAverage(){
 
-        String lastData = service.findLastDataFromAverage();
+        String lastData []= service.findLastDataFromAverage();
 
-        return ResponseEntity.ok(lastData);
+        return lastData;
 
     }
 
     @GetMapping("meanDeviation")
-    public ResponseEntity<String> findLastDataFromMeanDeviation(){
+    public  String [] findLastDataFromMeanDeviation(){
 
-        String lasData = service.findLastDataFromMeanDeviation();
+        String lasData [] = service.findLastDataFromMeanDeviation();
 
-        return ResponseEntity.ok(lasData);
+        return lasData;
     }
 
     @GetMapping("measure")
-    public ResponseEntity<String> findLastDataFromMeasure(){
+    public String []findLastDataFromMeasure(){
 
-        String lasData = service.findLastDataFromMeasure();
+        String lasData [] = service.findLastDataFromMeasure();
 
-        return ResponseEntity.ok(lasData);
+        return lasData;
 
     }
 
     @GetMapping("standardDeviation")
-    public ResponseEntity<String> findLastDataFromStandardDeviation(){
+    public String [] findLastDataFromStandardDeviation(){
 
-        String lasData = service.findLastDataFromStandardDeviation();
+        String lasData [] = service.findLastDataFromStandardDeviation();
 
-        return ResponseEntity.ok(lasData);
+        return lasData;
     }
 
     @GetMapping("variance")
-    public ResponseEntity<String> findLastDataFromVariance(){
+    public String [] findLastDataFromVariance(){
 
-        String lasData = service.findLastDataFromVariance();
+        String lasData [] = service.findLastDataFromVariance();
 
-        return ResponseEntity.ok(lasData);
+        return lasData;
     }
 
 }

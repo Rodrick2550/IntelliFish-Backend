@@ -41,28 +41,40 @@ public class WaterFlowSensorServiceImpl implements IWaterFlowSensorService {
     }
 
     @Override
-    public String findLastDataFromAverage() {
-        return repository.findLastDataFromAverage();
+    public String [] findLastDataFromAverage() {
+
+        String [] data = repository.findLastDataFromAverage();
+
+        return data;
+
+
     }
 
     @Override
-    public String findLastDataFromMeanDeviation() {
-        return repository.findLastDataFromMeanDeviation();
+    public String [] findLastDataFromMeanDeviation() {
+
+        String [] data = repository.findLastDataFromMeanDeviation();
+        return data;
     }
 
     @Override
-    public String findLastDataFromMeasure() {
-        return repository.findLastDataFromMeasure();
+    public String [] findLastDataFromMeasure() {
+        String [] data = repository.findLastDataFromMeasure();
+
+        return data;
     }
 
     @Override
-    public String findLastDataFromStandardDeviation() {
-        return repository.findLastDataFromStandardDeviation();
+    public String [] findLastDataFromStandardDeviation() {
+        String [] data = repository.findLastDataFromStandardDeviation();
+
+        return data;
     }
 
     @Override
-    public String findLastDataFromVariance() {
-        return repository.findLastDataFromVariance();
+    public String [] findLastDataFromVariance() {
+        String [] data = repository.findLastDataFromVariance();
+        return data;
     }
 
 

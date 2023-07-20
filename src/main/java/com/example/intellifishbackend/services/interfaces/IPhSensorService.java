@@ -2,7 +2,6 @@ package com.example.intellifishbackend.services.interfaces;
 
 import com.example.intellifishbackend.MQTT.dtos.PhSensorDataBodyRequest;
 import com.example.intellifishbackend.controllers.dtos.responses.BaseResponse;
-import com.example.intellifishbackend.entities.PhSensor;
 
 public interface IPhSensorService {
 
@@ -10,14 +9,14 @@ public interface IPhSensorService {
 
      BaseResponse list();
 
-    String findLastDataFromAverage();
+    String[] findLastDataFromAverage();
 
-    String findLastDataFromMeanDeviation();
+    String [] findLastDataFromMeanDeviation();
 
-    String findLastDataFromMeasure();
+    String [] findLastDataFromMeasure();
 
-    String findLastDataFromStandardDeviation();
+    String []  findLastDataFromStandardDeviation();
 
-    String findLastDataFromVariance();
+    String [] findLastDataFromVariance();
 
 }

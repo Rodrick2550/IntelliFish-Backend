@@ -9,7 +9,7 @@ import javax.validation.constraints.NotNull;
 public class UpdatePlantRequest {
     @NotBlank
     @NotNull
-    private String spices;
+    private String species;
 
     @NotBlank
     @NotNull

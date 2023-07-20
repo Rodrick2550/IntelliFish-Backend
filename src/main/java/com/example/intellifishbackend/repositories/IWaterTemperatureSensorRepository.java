@@ -9,23 +9,23 @@ import org.springframework.stereotype.Repository;
 public interface IWaterTemperatureSensorRepository extends JpaRepository<WaterTemperatureSensor, Long> {
 
     @Query(value = "select watertemperaturesensor.average from watertemperaturesensor "+
-            "order by average DESC LIMIT 1",nativeQuery = true)
-    String findLastDataFromAverage();
+            "order by average DESC LIMIT 15",nativeQuery = true)
+    String [] findLastDataFromAverage();
 
     @Query(value = "select watertemperaturesensor.mean_deviation from watertemperaturesensor "+
-            "order by mean_deviation DESC LIMIT 1",nativeQuery = true)
-    String findLastDataFromMeanDeviation();
+            "order by mean_deviation DESC LIMIT 15",nativeQuery = true)
+    String [] findLastDataFromMeanDeviation();
 
     @Query(value = "select watertemperaturesensor.measure from watertemperaturesensor "+
-            "order by measure DESC LIMIT 1",nativeQuery = true)
-    String findLastDataFromMeasure();
+            "order by measure DESC LIMIT 15",nativeQuery = true)
+    String [] findLastDataFromMeasure();
 
     @Query(value = "select watertemperaturesensor.standard_deviation from watertemperaturesensor "+
-            "order by standard_deviation DESC LIMIT 1",nativeQuery = true)
-    String findLastDataFromStandardDeviation();
+            "order by standard_deviation DESC LIMIT 15",nativeQuery = true)
+    String [] findLastDataFromStandardDeviation();
 
     @Query(value = "select watertemperaturesensor.variance from watertemperaturesensor "+
-            "order by variance DESC LIMIT 1",nativeQuery = true)
-    String findLastDataFromVariance();
+            "order by variance DESC LIMIT 15",nativeQuery = true)
+    String [] findLastDataFromVariance();
 
 }

@@ -144,8 +144,9 @@ public class UserServiceImpl implements IUserService {
         UserResponse userResponse = new UserResponse();
         userResponse.setId(user.getId());
         userResponse.setEmail(user.getEmail());
-        userResponse.setName(userResponse.getName());
-        userResponse.setLastname(userResponse.getLastname());
+        userResponse.setName(user.getName());
+        userResponse.setLastname(user.getLastname());
+        userResponse.setCode(user.getCode());
 
         return userResponse;
 

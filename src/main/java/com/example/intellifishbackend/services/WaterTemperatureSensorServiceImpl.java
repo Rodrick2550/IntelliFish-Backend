@@ -40,29 +40,35 @@ public class WaterTemperatureSensorServiceImpl implements IWaterTemperatureServi
     }
 
     @Override
-    public String findLastDataFromAverage() {
+    public String [] findLastDataFromAverage() {
 
-        return repository.findLastDataFromAverage();
+        String [] data = repository.findLastDataFromAverage();
+
+        return data;
     }
 
     @Override
-    public String findLastDataFromMeanDeviation() {
-        return repository.findLastDataFromMeanDeviation();
+    public String [] findLastDataFromMeanDeviation() {
+        String [] data = repository.findLastDataFromMeanDeviation();
+        return data;
     }
 
     @Override
-    public String findLastDataFromMeasure() {
+    public String [] findLastDataFromMeasure() {
         return repository.findLastDataFromMeasure();
     }
 
     @Override
-    public String findLastDataFromStandardDeviation() {
-        return repository.findLastDataFromStandardDeviation();
+    public String [] findLastDataFromStandardDeviation() {
+        String [] data = repository.findLastDataFromMeasure();
+
+        return data;
     }
 
     @Override
-    public String findLastDataFromVariance() {
-        return repository.findLastDataFromVariance();
+    public String [] findLastDataFromVariance() {
+        String [] data = repository.findLastDataFromVariance();
+        return data;
     }
 
     private WaterTemperatureSensor from(WaterTemperatureSensorDataBodyRequest request){

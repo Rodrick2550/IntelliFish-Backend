@@ -41,7 +41,7 @@ public class AuthServiceImpl implements IAuthService {
         String token = JWTUtils.generateToken(jwtSecret, email, payload);
 
         Map<String,String> data = new HashMap<>();
-        data.put("accessToken: ", token);
+        data.put("accessToken ", token);
 
         return BaseResponse.builder()
                 .data(data)

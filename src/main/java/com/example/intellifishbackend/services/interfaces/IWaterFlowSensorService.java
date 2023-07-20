@@ -9,13 +9,13 @@ public interface IWaterFlowSensorService {
 
     BaseResponse list();
 
-    String findLastDataFromAverage();
+    String [] findLastDataFromAverage();
 
-    String findLastDataFromMeanDeviation();
+    String [] findLastDataFromMeanDeviation();
 
-    String findLastDataFromMeasure();
+    String [] findLastDataFromMeasure();
 
-    String findLastDataFromStandardDeviation();
+    String [] findLastDataFromStandardDeviation();
 
-    String findLastDataFromVariance();
+    String [] findLastDataFromVariance();
 }

@@ -37,8 +37,6 @@ public class PlantServiceImpl implements IPlantService {
 
         Plant plant = repository.save(from(request));
 
-
-
         return BaseResponse.builder()
                 .data(plant)
                 .message("Plant created successfully")
@@ -103,16 +101,14 @@ public class PlantServiceImpl implements IPlantService {
 
     private Plant from(CreatePlantRequest request){
         Plant plant = new Plant();
-
-        plant.setSpecies(request.getSpices());
+        plant.setSpecies(request.getSpecies());
         plant.setImageUrl(request.getImageUrl());
-
         return plant;
     }
 
     private Plant update(Plant plant, UpdatePlantRequest request){
 
-        plant.setSpecies(request.getSpices());
+        plant.setSpecies(request.getSpecies());
         plant.setImageUrl(request.getImageUrl());
         repository.save(plant);
 
